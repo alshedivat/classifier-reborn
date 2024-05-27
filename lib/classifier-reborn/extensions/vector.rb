@@ -61,7 +61,7 @@ class Matrix
     end # of do while true
     s = []
     qrot.row_size.times do |r|
-      s << Math.sqrt(qrot[r, r])
+      s << Math.sqrt(qrot[r, r] + 1e-7)
     end
     # puts "cnt = #{cnt}"
     if row_size >= column_size
